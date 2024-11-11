@@ -1,16 +1,24 @@
 {
-  "name": "components",
+  "name": "@Soapey/components",
   "version": "1.0.0",
-  "description": "NextJS Component Library",
-  "main": "index.js",
+  "description": "A reusable NextJS component library",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soapey/components.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Grant Soper",
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
     "@storybook/addon-essentials": "^8.4.2",
@@ -20,9 +28,16 @@
     "@storybook/nextjs": "^8.4.2",
     "@storybook/react": "^8.4.2",
     "@storybook/test": "^8.4.2",
-    "storybook": "^8.4.2"
+    "css-loader": "^7.1.2",
+    "storybook": "^8.4.2",
+    "style-loader": "^4.0.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18"
   }
 }
