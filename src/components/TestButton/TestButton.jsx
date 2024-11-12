@@ -1,29 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./TestButton.css";
+// src/components/TestButton/TestButton.jsx
 
-export const TestButton = ({ backgroundColor, hoverColor, ...props }) => {
+import React from "react";
+
+export const TestButton = ({ ...props }) => {
   return (
-    <button className="testButton" type="button" {...props}>
-      TestButton
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-        button:hover {
-          background-color: ${hoverColor};
-        }
-      `}</style>
+    <button
+      className="bg-gray-200 p-2 rounded-lg hover:bg-gray-300"
+      type="button"
+      {...props}
+    >
+      Caption
     </button>
   );
-};
-
-TestButton.propTypes = {
-  backgroundColor: PropTypes.string,
-  hoverColor: PropTypes.string,
-};
-
-TestButton.defaultProps = {
-  backgroundColor: "blue",
-  hoverColor: "darkblue",
 };
